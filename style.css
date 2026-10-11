@@ -1019,3 +1019,99 @@ button, a { touch-action: manipulation; }
   .service-checkboxes { grid-template-columns:minmax(0,1fr); }
   .cta-primary, .form-submit { max-width:100%; }
 }
+
+
+/* Contact page mobile spacing fix: remove the oversized empty hero area */
+@media (max-width: 768px) {
+  #page-contact .page-hero-small {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 2rem 5vw 1.5rem;
+  }
+  #page-contact .page-h1 {
+    margin-bottom: 1rem;
+  }
+  #page-contact .page-sub {
+    line-height: 1.6;
+  }
+}
+@media (max-width: 480px) {
+  #page-contact .page-hero-small {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+  #page-contact .page-h1 {
+    font-size: clamp(2.5rem, 12vw, 3.7rem);
+    margin-bottom: .9rem;
+  }
+}
+
+/* Global mobile header clearance: prevent fixed navbar overlapping page headings */
+@media (max-width: 768px) {
+  #page-home .hero-section {
+    min-height: 100svh;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+  }
+  #page-home .hero-eyebrow {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    line-height: 1.5;
+  }
+  #page-home .hero-h1 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+  #page-services .page-hero-small,
+  #page-projects .page-hero-small,
+  #page-about .page-hero-small,
+  #page-contact .page-hero-small {
+    min-height: auto;
+    justify-content: flex-start;
+    padding-top: 7.25rem !important;
+    padding-bottom: 1.75rem;
+  }
+  .page-hero-small .section-tag {
+    display: inline-flex;
+    position: relative;
+    margin-bottom: .85rem;
+    line-height: 1.4;
+  }
+  .page-hero-small .page-h1 {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.04;
+    overflow: visible;
+  }
+  .page-hero-small .page-sub {
+    position: relative;
+    line-height: 1.65;
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  #page-home .hero-section {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  #page-home .hero-eyebrow {
+    font-size: .62rem;
+    letter-spacing: .14em;
+  }
+  #page-services .page-hero-small,
+  #page-projects .page-hero-small,
+  #page-about .page-hero-small,
+  #page-contact .page-hero-small {
+    padding: 1rem 1rem 1.4rem !important;
+  }
+  .page-hero-small .page-h1 {
+    font-size: clamp(2.45rem, 11.5vw, 3.4rem);
+    line-height: 1.05;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .page-hero-small .section-tag { margin-bottom: .75rem; }
+}
