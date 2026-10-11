@@ -1105,7 +1105,7 @@ button, a { touch-action: manipulation; }
   #page-projects .page-hero-small,
   #page-about .page-hero-small,
   #page-contact .page-hero-small {
-    padding: 1rem 1rem 1.4rem !important;
+    padding: 5rem 1rem 1.4rem !important;
   }
   .page-hero-small .page-h1 {
     font-size: clamp(2.45rem, 11.5vw, 3.4rem);
