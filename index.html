@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Devista — Digital Agency for Development, Design &amp; Growth</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<!-- ═══════════ NOISE GRAIN ═══════════ -->
+<div id="grain"></div>
+<!-- ═══════════ CURSOR ═══════════ -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="cursor-text"></div>
+<!-- ═══════════ LOADER ═══════════ -->
+<div id="loader">
+<div aria-hidden="true" class="loader-bg-letters">DEVISTA</div>
+<div class="loader-content">
+<div class="loader-logo-wrap">
+<span class="ll" data-l="D">D</span>
+<span class="ll" data-l="E">E</span>
+<span class="ll" data-l="V">V</span>
+<span class="ll" data-l="I">I</span>
+<span class="ll" data-l="S">S</span>
+<span class="ll" data-l="T">T</span>
+<span class="ll" data-l="A">A</span>
+</div>
+<div class="loader-bar-outer">
+<div class="loader-bar-fill" id="loaderBar"></div>
+</div>
+<div class="loader-bottom">
+<span class="loader-pct" id="loaderPct">0</span>
+<span class="loader-status" id="loaderStatus">Loading Experience</span>
+</div>
+</div>
+</div>
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+<div class="nav-logo" data-page="home">Devista<span class="logo-dot">.</span></div>
+<ul class="nav-links">
+<li><button class="nav-btn" data-page="home">Home</button></li>
+<li><button class="nav-btn" data-page="services">Services</button></li>
+<li><button class="nav-btn" data-page="projects">Projects</button></li>
+<li><button class="nav-btn" data-page="about">About</button></li>
+<li><button class="nav-btn nav-contact-btn" data-page="contact">Contact</button></li>
+</ul>
+<div class="nav-right">
+<button aria-label="Toggle theme" class="theme-toggle" id="themeToggle">
+<span class="theme-icon sun">☀</span>
+<span class="theme-icon moon">☽</span>
+</button>
+<button aria-label="Menu" class="hamburger" id="hamburger">
+<span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobileNav">
+<button class="mob-item" data-page="home">Home</button>
+<button class="mob-item" data-page="services">Services</button>
+<button class="mob-item" data-page="projects">Projects</button>
+<button class="mob-item" data-page="about">About</button>
+<button class="mob-item" data-page="contact">Contact</button>
+</div>
+<!-- ═══════════════════════════════════
+       PAGES WRAPPER
+  ═══════════════════════════════════ -->
+<div id="pages-wrapper">
+<!-- ━━━━━━━━━━━━━━━━━━━━━━
+         PAGE: HOME
+    ━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="page" id="page-home">
+<!-- HERO -->
+<section class="hero-section">
+<div class="hero-orb orb-left"></div>
+<div class="hero-orb orb-right"></div>
+<div aria-hidden="true" class="hero-grid-lines">
+<div class="hgl" style="left:25%"></div>
+<div class="hgl" style="left:50%"></div>
+<div class="hgl" style="left:75%"></div>
+</div>
+<div class="hero-inner">
+<p class="hero-eyebrow"><span class="eyebrow-line"></span>Digital Agency · Development · Design · Growth</p>
+<h1 class="hero-h1">
+<div class="h1-row"><span class="h1-word">We</span> <span class="h1-word">Create</span></div>
+<div class="h1-row italic-row"><span class="h1-word italic">Digital</span></div>
+<div class="h1-row"><span class="h1-word">Experiences</span><span class="h1-dot accent">.</span></div>
+</h1>
+<p class="hero-desc">From custom Full-Service Digital Agency development and modern websites to immersive animations and digital marketing, Devista helps businesses turn ideas into meaningful online experiences.</p>
+<div class="hero-actions">
+<button class="cta-primary" data-page="projects">Explore Our Work <span class="cta-arrow">↗</span></button>
+<button class="cta-ghost" data-page="contact">Start a Project</button>
+</div>
+</div>
+<div class="hero-scroll-hint">
+<div class="scroll-pill">
+<div class="scroll-ball"></div>
+</div>
+<span>Scroll</span>
+</div>
+</section>
+<!-- MARQUEE -->
+<div class="marquee-section">
+<div class="marquee-track" id="marqueeTrack">
+<div class="marquee-inner"><span>Wix Studio</span><span class="msep">◆</span><span>Custom Velo Development</span><span class="msep">◆</span><span>UI / UX Design</span><span class="msep">◆</span><span>E-Commerce</span><span class="msep">◆</span><span>Interactive Websites</span><span class="msep">◆</span><span>Digital Marketing</span><span class="msep">◆</span><span>Wix Studio</span><span class="msep">◆</span><span>Custom Velo Development</span><span class="msep">◆</span><span>UI / UX Design</span><span class="msep">◆</span><span>E-Commerce</span><span class="msep">◆</span><span>Interactive Websites</span><span class="msep">◆</span><span>Digital Marketing</span></div>
+</div>
+</div>
+<!-- WHY US -->
+<section class="why-section">
+<div class="section-header">
+<span class="section-tag">Why Devista</span>
+<h2 class="section-h">We build more than<br/><em>websites.</em></h2>
+</div>
+<div class="why-grid">
+<div class="why-card" data-delay="0">
+<div class="wc-num">01</div>
+<div class="wc-icon">◈</div>
+<h3 class="wc-title">Built Around Your Goals</h3>
+<p class="wc-desc">We start by understanding your business, audience, and goals, then shape a digital solution around what you need.</p>
+</div>
+<div class="why-card" data-delay="1">
+<div class="wc-num">02</div>
+<div class="wc-icon">◉</div>
+<h3 class="wc-title">Design Meets Development</h3>
+<p class="wc-desc">From polished UI/UX to custom functionality, we bring design and development together for a cohesive experience.</p>
+</div>
+<div class="why-card" data-delay="2">
+<div class="wc-num">03</div>
+<div class="wc-icon">⬡</div>
+<h3 class="wc-title">Creative Thinking, Practical Results</h3>
+<p class="wc-desc">We balance visual impact with usability, responsive layouts, and thoughtful implementation across devices.</p>
+</div>
+</div>
+</section>
+<!-- STATS -->
+<section class="stats-section">
+<div class="stat-item">
+<span class="stat-n" data-count="200">0</span>
+<span class="stat-l">Projects Completed</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<span class="stat-n" data-count="3">0</span>
+<span class="stat-l">Years of Experience</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<span class="stat-n" data-count="4">0</span>
+<span class="stat-l">Core Service Areas</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat-item">
+<span class="stat-n" data-count="5">0</span>
+<span class="stat-l">Core Capabilities</span>
+</div>
+</section>
+</div><!-- /page-home -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━
+         PAGE: SERVICES
+    ━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="page" id="page-services" style="display:none">
+<section class="page-hero-small">
+<span class="section-tag">What We Offer</span>
+<h1 class="page-h1">Our <em>Services</em></h1>
+<p class="page-sub">Four connected service areas to help your business launch, improve, and grow online.</p>
+</section>
+<section class="services-main">
+<div class="svc-list">
+<div class="svc-row">
+<div class="svc-row-left">
+<span class="svc-row-num">01</span>
+<div class="svc-row-icon">◈</div>
+</div>
+<div class="svc-row-center">
+<h3 class="svc-row-title">Wix Studio &amp; Custom Velo Development</h3>
+<p class="svc-row-desc">Custom Wix Studio websites and Velo-powered functionality, including dynamic pages, API integrations, custom forms, and tailored business workflows.</p>
+<div class="svc-tags"><span>Wix Studio</span><span>Velo</span><span>API Integrations</span></div>
+</div>
+<div class="svc-row-right">
+<div class="svc-expand-btn">View →</div>
+</div>
+</div>
+<div class="svc-row">
+<div class="svc-row-left">
+<span class="svc-row-num">02</span>
+<div class="svc-row-icon">◉</div>
+</div>
+<div class="svc-row-center">
+<h3 class="svc-row-title">Full-Service Digital Agency</h3>
+<p class="svc-row-desc">Business websites, landing pages, UI/UX design, e-commerce experiences, and responsive development designed around your brand and customers.</p>
+<div class="svc-tags"><span>Web Design</span><span>UI / UX</span><span>E-Commerce</span></div>
+</div>
+<div class="svc-row-right">
+<div class="svc-expand-btn">View →</div>
+</div>
+</div>
+<div class="svc-row">
+<div class="svc-row-left">
+<span class="svc-row-num">03</span>
+<div class="svc-row-icon">⬡</div>
+</div>
+<div class="svc-row-center">
+<h3 class="svc-row-title">Creative Development &amp; Interactive Experiences</h3>
+<p class="svc-row-desc">Bring your website to life with GSAP animations, scroll-triggered interactions, micro-interactions, and Three.js experiences where they add value.</p>
+<div class="svc-tags"><span>GSAP</span><span>ScrollTrigger</span><span>Three.js</span></div>
+</div>
+<div class="svc-row-right">
+<div class="svc-expand-btn">View →</div>
+</div>
+</div>
+<div class="svc-row">
+<div class="svc-row-left">
+<span class="svc-row-num">04</span>
+<div class="svc-row-icon">◎</div>
+</div>
+<div class="svc-row-center">
+<h3 class="svc-row-title">Digital Marketing &amp; Website Growth</h3>
+<p class="svc-row-desc">Support online growth with SEO foundations, Google Ads, conversion tracking, analytics integration, and lead-generation landing pages.</p>
+<div class="svc-tags"><span>SEO</span><span>Google Ads</span><span>Analytics</span></div>
+</div>
+<div class="svc-row-right">
+<div class="svc-expand-btn">View →</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROCESS STRIP -->
+<section class="process-strip">
+<div class="section-header" style="padding:0 5vw">
+<span class="section-tag">How We Work</span>
+<h2 class="section-h">A Clear, Collaborative Process</h2>
+</div>
+<div class="process-steps">
+<div class="ps-item">
+<div class="ps-circle">01</div>
+<div class="ps-line"></div>
+<h4 class="ps-title">DISCOVERY &amp; GOALS</h4>
+<p class="ps-desc">WE LEARN ABOUT YOUR BUSINESS, AUDIENCE, GOALS, AND PROJECT REQUIREMENTS.</p>
+</div>
+<div class="ps-item">
+<div class="ps-circle">02</div>
+<div class="ps-line"></div>
+<h4 class="ps-title">SCOPE &amp; PROPOSAL</h4>
+<p class="ps-desc">WE DEFINE THE SCOPE, DELIVERABLES, TIMELINE, AND NEXT STEPS BEFORE WORK BEGINS.</p>
+</div>
+<div class="ps-item">
+<div class="ps-circle">03</div>
+<div class="ps-line"></div>
+<h4 class="ps-title">DESIGN &amp; DEVELOPMENT</h4>
+<p class="ps-desc">WE BUILD, SHARE PROGRESS, AND REFINE THE EXPERIENCE WITH YOUR FEEDBACK.</p>
+</div>
+<div class="ps-item">
+<div class="ps-circle">04</div>
+<div class="ps-line"></div>
+<h4 class="ps-title">REVIEW &amp; LAUNCH</h4>
+<p class="ps-desc">WE TEST THE EXPERIENCE, COMPLETE FINAL REVISIONS, AND PREPARE YOUR PROJECT FOR LAUNCH.</p>
+</div>
+</div></section>
+<!-- CTA -->
+<section class="page-cta-strip">
+<h2 class="pcs-h">Ready to build something<br/><em>unforgettable?</em></h2>
+<button class="cta-primary" data-page="contact">Start a Project ↗</button>
+</section>
+</div><!-- /page-services -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━
+         PAGE: PROJECTS
+    ━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="page" id="page-projects" style="display:none">
+<section class="page-hero-small">
+<span class="section-tag">Selected Work</span>
+<h1 class="page-h1">Featured <em>Projects</em></h1>
+<p class="page-sub">A selection of custom booking systems, advanced search, e-commerce filters, and API integrations built for real businesses.</p>
+</section>
+<!-- Projects Grid: all projects shown without category filters -->
+<section class="projects-grid" id="projectsGrid">
+<a class="proj-card project-link-card" data-cat="web" href="https://www.stylesbyod.com" target="_blank" rel="noopener noreferrer" aria-label="View Styles by OD website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#271c25 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #d7a9bc55;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#d7a9bc;margin-bottom:1rem;">Styles by OD</div>
+<div style="height:7px;width:90%;background:#d7a9bc66;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#d7a9bc33;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #d7a9bc55;border-radius:8px;background:linear-gradient(135deg,#d7a9bc33,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">Styles by OD</h3><div class="proj-cats"><span>Booking System</span></div><p class="proj-description">Custom booking flow with a multi-step form and date-blocking mechanism.</p></div><span class="proj-year">↗</span></div>
+</a>
+<a class="proj-card project-link-card" data-cat="web" href="https://www.socalinjurylines.com" target="_blank" rel="noopener noreferrer" aria-label="View SoCal Injury Lines website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#102337 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #63b8e855;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#63b8e8;margin-bottom:1rem;">SoCal Injury Lines</div>
+<div style="height:7px;width:90%;background:#63b8e866;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#63b8e833;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #63b8e855;border-radius:8px;background:linear-gradient(135deg,#63b8e833,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">SoCal Injury Lines</h3><div class="proj-cats"><span>Google Maps API</span></div><p class="proj-description">Mega search with Google Maps API integration to calculate distance.</p></div><span class="proj-year">↗</span></div>
+</a>
+<a class="proj-card project-link-card" data-cat="web" href="https://www.cuescreens.com" target="_blank" rel="noopener noreferrer" aria-label="View CueScreens website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#17251e 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #8bc6a055;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#8bc6a0;margin-bottom:1rem;">CueScreens</div>
+<div style="height:7px;width:90%;background:#8bc6a066;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#8bc6a033;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #8bc6a055;border-radius:8px;background:linear-gradient(135deg,#8bc6a033,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">CueScreens</h3><div class="proj-cats"><span>E-Commerce Filters</span></div><p class="proj-description">Advanced store product filters by supported vehicle make, model, year, and type.</p></div><span class="proj-year">↗</span></div>
+</a>
+<a class="proj-card project-link-card" data-cat="web" href="https://www.caltechmathmeet.org" target="_blank" rel="noopener noreferrer" aria-label="View Caltech Math Meet website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#241d35 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #bca3f555;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#bca3f5;margin-bottom:1rem;">Caltech Math Meet</div>
+<div style="height:7px;width:90%;background:#bca3f566;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#bca3f533;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #bca3f555;border-radius:8px;background:linear-gradient(135deg,#bca3f533,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">Caltech Math Meet</h3><div class="proj-cats"><span>Registration & API</span></div><p class="proj-description">Team registration flow with automatic fee calculation and Google Sheets API integration.</p></div><span class="proj-year">↗</span></div>
+</a>
+<a class="proj-card project-link-card" data-cat="web" href="https://www.swtpetite.com/" target="_blank" rel="noopener noreferrer" aria-label="View SWT Petite website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#332015 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #e5b77c55;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#e5b77c;margin-bottom:1rem;">SWT Petite</div>
+<div style="height:7px;width:90%;background:#e5b77c66;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#e5b77c33;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #e5b77c55;border-radius:8px;background:linear-gradient(135deg,#e5b77c33,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">SWT Petite</h3><div class="proj-cats"><span>Custom Cart & Scheduling</span></div><p class="proj-description">Customized cart for pickup/delivery, delivery date and time selection, admin date/time blocking, and automatic date blocking after 10 orders.</p></div><span class="proj-year">↗</span></div>
+</a>
+<a class="proj-card project-link-card" data-cat="web" href="https://www.refresh570.com/services-form" target="_blank" rel="noopener noreferrer" aria-label="View Refresh 570 website">
+<div class="proj-card-img">
+<div class="proj-img-inner" style="background:linear-gradient(135deg,#13292b 0%,#080b10 100%);display:flex;align-items:center;justify-content:center;padding:2rem;">
+<div class="proj-mock" style="width:100%;max-width:300px;padding:1.5rem;border:1px solid #79d0c855;border-radius:14px;background:#080b10aa;">
+<div style="font-family:Syne,sans-serif;font-size:clamp(1.2rem,2.5vw,2rem);font-weight:800;color:#79d0c8;margin-bottom:1rem;">Refresh 570</div>
+<div style="height:7px;width:90%;background:#79d0c866;border-radius:6px;margin-bottom:9px;"></div>
+<div style="height:7px;width:72%;background:#79d0c833;border-radius:6px;margin-bottom:18px;"></div>
+<div style="height:75px;border:1px solid #79d0c855;border-radius:8px;background:linear-gradient(135deg,#79d0c833,transparent);"></div>
+</div></div>
+<div class="proj-hover-overlay"><span class="proj-view-btn">Visit Live Website ↗</span></div>
+</div>
+<div class="proj-card-info"><div class="pci-left"><h3 class="proj-title">Refresh 570</h3><div class="proj-cats"><span>Custom Booking Logic</span></div><p class="proj-description">Custom booking system built without Wix Bookings, including automatic working-time calculation.</p></div><span class="proj-year">↗</span></div>
+</a>
+</section>
+<!-- Our approach -->
+<section class="testimonials-section">
+<div class="section-header">
+<span class="section-tag">The Devista Difference</span>
+<h2 class="section-h">How we <em>work</em></h2>
+</div>
+<div class="test-wrap">
+<div class="test-card-slide active" id="tc0">
+<div class="tc-quote">01</div>
+<p class="tc-text">We begin with your business goals and user needs, then recommend a practical approach, clear scope, and the right technology for the job.</p>
+<div class="tc-author"><div class="tc-avatar">01</div><div><span class="tc-name">Understand First</span><span class="tc-role">Discovery &amp; planning</span></div></div>
+</div>
+<div class="test-card-slide" id="tc1" style="display:none">
+<div class="tc-quote">02</div>
+<p class="tc-text">Design, development, and functionality are considered together, helping the final website feel consistent from the first screen to the last interaction.</p>
+<div class="tc-author"><div class="tc-avatar">02</div><div><span class="tc-name">Build With Purpose</span><span class="tc-role">Design &amp; development</span></div></div>
+</div>
+<div class="test-card-slide" id="tc2" style="display:none">
+<div class="tc-quote">03</div>
+<p class="tc-text">We keep communication open, review progress together, and focus on a solution that can support your next stage of growth.</p>
+<div class="tc-author"><div class="tc-avatar">03</div><div><span class="tc-name">Grow Together</span><span class="tc-role">Feedback &amp; improvement</span></div></div>
+</div>
+<div class="test-nav">
+<button aria-label="Previous approach" class="tn-btn" id="tPrev">←</button>
+<button aria-label="Next approach" class="tn-btn" id="tNext">→</button>
+</div>
+</div>
+</section>
+</div><!-- /page-projects -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━
+         PAGE: ABOUT
+    ━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="page" id="page-about" style="display:none">
+<section class="page-hero-small">
+<span class="section-tag">Who We Are</span>
+<h1 class="page-h1">About <em>Devista</em></h1>
+<p class="page-sub">Devista brings together website development, creative technology, UI/UX, e-commerce, and digital marketing. We help businesses and partner agencies turn complex requirements into polished, practical digital experiences.</p>
+</section>
+<section class="about-manifesto">
+<div class="am-left">
+<p class="am-big-line">Technology should solve problems —</p>
+<p class="am-big-line accent-line">creativity makes it memorable.</p>
+</div>
+<div class="am-right">
+<p class="am-body">Our approach combines thoughtful planning, reliable development, and a strong eye for design. Whether you need a Wix Studio website, custom functionality, a more engaging user experience, or marketing support, we shape the solution around your goals.</p>
+<p class="am-body" style="margin-top:1.5rem">We collaborate closely throughout the process, keep communication clear, and focus on creating websites that are easy to use, maintain, and grow.</p>
+</div>
+</section>
+<section class="values-section">
+<div class="section-header">
+<span class="section-tag">Our Values</span>
+<h2 class="section-h">What drives us</h2>
+</div>
+<div class="values-grid">
+<div class="val-card"><h4>Thoughtful Craft</h4><p>We pay attention to the details that make a website feel clear, consistent, and polished.</p></div>
+<div class="val-card"><h4>Honesty First</h4><p>We communicate openly about scope, trade-offs, timelines, and what will best serve your project.</p></div>
+<div class="val-card"><h4>Always Evolving</h4><p>We choose tools based on the project and keep exploring better ways to design, build, and improve.</p></div>
+<div class="val-card"><h4>Partnership Model</h4><p>We work as a collaborative extension of your team, from the first brief through launch and future improvements.</p></div>
+</div>
+</section>
+<section class="team-section">
+<div class="section-header">
+<span class="section-tag">People &amp; Capabilities</span>
+<h2 class="section-h">A team built around <em>your goals</em></h2>
+</div>
+<div class="team-grid">
+<div class="team-card">
+<div class="team-avatar" style="background:linear-gradient(135deg,#7c3aed,#4f46e5)">WX</div>
+<h4 class="team-name">Wix Studio &amp; Velo</h4>
+<span class="team-role">Custom development</span>
+</div>
+<div class="team-card">
+<div class="team-avatar" style="background:linear-gradient(135deg,#0891b2,#0e7490)">UX</div>
+<h4 class="team-name">UI / UX &amp; E-Commerce</h4>
+<span class="team-role">Design and online stores</span>
+</div>
+<div class="team-card">
+<div class="team-avatar" style="background:linear-gradient(135deg,#059669,#047857)">FX</div>
+<h4 class="team-name">Creative Development</h4>
+<span class="team-role">GSAP and interactive web</span>
+</div>
+<div class="team-card">
+<div class="team-avatar" style="background:linear-gradient(135deg,#d97706,#b45309)">DG</div>
+<h4 class="team-name">Digital Growth</h4>
+<span class="team-role">SEO, ads, and analytics</span>
+</div>
+</div>
+</section>
+<section class="awards-section">
+<div class="section-header">
+<span class="section-tag">Our Expertise</span>
+<h2 class="section-h">Tools &amp; <em>Capabilities</em></h2>
+</div>
+<div class="awards-list">
+<div class="award-row"><span class="aw-name">Wix Studio &amp; Velo</span><span class="aw-count">01</span></div>
+<div class="award-row"><span class="aw-name">GSAP &amp; ScrollTrigger</span><span class="aw-count">02</span></div>
+<div class="award-row"><span class="aw-name">Three.js &amp; Interactive Web</span><span class="aw-count">03</span></div>
+<div class="award-row"><span class="aw-name">E-Commerce &amp; API Integrations</span><span class="aw-count">04</span></div>
+<div class="award-row"><span class="aw-name">SEO, Ads &amp; Analytics</span><span class="aw-count">05</span></div>
+</div>
+</section>
+</div><!-- /page-about -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━
+         PAGE: CONTACT
+    ━━━━━━━━━━━━━━━━━━━━━━ -->
+<div class="page" id="page-contact" style="display:none">
+<section class="page-hero-small">
+<span class="section-tag">Get In Touch</span>
+<h1 class="page-h1">Let's Build<br/><em>Together.</em></h1>
+<p class="page-sub">Tell us what you are building, improving, or growing. Share a few details and we can discuss the right next steps.</p>
+</section>
+<section class="contact-section">
+<div class="contact-left">
+<div class="contact-info-block">
+<span class="cib-label">Email Us</span>
+<a class="cib-val" href="mailto:devista007@gmail.com">devista007@gmail.com</a>
+</div>
+<div class="contact-info-block">
+<span class="cib-label">Working Style</span>
+<span class="cib-val">Remote-friendly collaboration</span>
+</div>
+<div class="contact-info-block">
+<span class="cib-label">Based In</span>
+<span class="cib-val">Chennai, Tamil Nadu, India</span>
+</div>
+<div class="contact-social">
+<span class="cs-label">Explore Devista</span>
+<div class="cs-links">
+<a class="cs-link" href="https://rajmohanv2797.wixstudio.com/portfolio" rel="noopener noreferrer" target="_blank">Portfolio ↗</a>
+<a class="cs-link" href="https://www.fiverr.com/rajmohan533/do-wix-website-development" rel="noopener noreferrer" target="_blank">Fiverr ↗</a>
+<a class="cs-link" href="mailto:devista007@gmail.com">Email ↗</a>
+</div>
+</div>
+</div>
+<div class="contact-right">
+<form class="contact-form" id="contactForm" novalidate="">
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="clientName">Your Name *</label>
+<input class="form-input" id="clientName" name="name" placeholder="Your name" required="" type="text"/>
+<span class="form-err" id="err-name"></span>
+</div>
+<div class="form-group">
+<label class="form-label" for="clientEmail">Email Address *</label>
+<input class="form-input" id="clientEmail" name="email" placeholder="you@company.com" required="" type="email"/>
+<span class="form-err" id="err-email"></span>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Services Needed *</label>
+<div class="service-checkboxes">
+<label class="sc-item"><input name="service" type="checkbox" value="Wix Studio &amp; Velo"/><span>Wix Studio &amp; Velo</span></label>
+<label class="sc-item"><input name="service" type="checkbox" value="Business Website / UI/UX"/><span>Business Website / UI/UX</span></label>
+<label class="sc-item"><input name="service" type="checkbox" value="GSAP / Interactive Website"/><span>GSAP / Interactive Website</span></label>
+<label class="sc-item"><input name="service" type="checkbox" value="Digital Marketing / SEO"/><span>Digital Marketing / SEO</span></label>
+<label class="sc-item"><input name="service" type="checkbox" value="SEO &amp; Analytics"/><span>SEO &amp; Analytics</span></label>
+<label class="sc-item"><input name="service" type="checkbox" value="E-Commerce &amp; API Integrations"/><span>E-Commerce &amp; API Integrations</span></label>
+</div>
+<span class="form-err" id="err-service"></span>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="clientBudget">Budget Range</label>
+<select class="form-input form-select" id="clientBudget" name="budget">
+
+
+
+
+
+<option value="">Select budget range</option><option value="under-25k">Under ₹25K</option><option value="25k-50k">₹25K – ₹50K</option><option value="50k-100k">₹50K – ₹1L</option><option value="100k+">₹1L+</option></select>
+</div>
+<div class="form-group">
+<label class="form-label" for="clientTimeline">Timeline</label>
+<select class="form-input form-select" id="clientTimeline" name="timeline">
+<option value="">Select timeline</option>
+<option value="asap">ASAP</option>
+<option value="1month">Within 1 month</option>
+<option value="3months">1–3 months</option>
+<option value="flexible">Flexible</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="clientFeedback">Your Message / Project Brief *</label>
+<textarea class="form-input form-textarea" id="clientFeedback" name="message" placeholder="Tell us about your goals, preferred features, audience, and timeline..." required="" rows="5"></textarea>
+<span class="form-err" id="err-message"></span>
+</div>
+<button class="form-submit" id="formSubmit" type="submit">
+<span class="fs-text">Send Message</span>
+<span class="fs-arrow">↗</span>
+</button>
+</form>
+<!-- Success message -->
+<div class="form-success" id="formSuccess">
+<div class="fs-icon">✓</div>
+<h3>Enquiry Sent Successfully</h3>
+<p>Thanks for contacting Devista. Your project enquiry has been submitted.</p>
+</div>
+</div>
+</section>
+</div><!-- /page-contact -->
+</div><!-- /pages-wrapper -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>window.addEventListener("DOMContentLoaded", function () { if (window.emailjs) emailjs.init({ publicKey: "qOovgvZqF5JZCl5Vi" }); });</script>
+<script src="script.js"></script>
+</body>
+</html>
