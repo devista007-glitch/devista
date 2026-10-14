@@ -241,6 +241,8 @@ input,textarea,select{font-family:inherit;color:inherit;outline:none}
 .nav-contact-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),0.3)}
 .nav-contact-btn::after{display:none}
 .nav-right{display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(-16px)}
+.nav-fiverr-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.58rem 1rem;border:1px solid var(--accent);border-radius:100px;color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background .25s,color .25s,transform .25s}
+.nav-fiverr-btn:hover{background:var(--accent);color:var(--bg);transform:translateY(-2px)}
 
 /* Theme Toggle */
 .theme-toggle{
@@ -780,10 +782,11 @@ input,textarea,select{font-family:inherit;color:inherit;outline:none}
 }
 .team-card:hover{background:var(--bg2)}
 .team-avatar{
-  width:70px;height:70px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;font-weight:700;color:#fff;
+  width:88px;height:88px;border-radius:50%;
+  display:block;object-fit:cover;object-position:center;
+  border:2px solid var(--border);
   margin:0 auto 1.2rem;
+  background:var(--bg2);
   transition:transform .4s cubic-bezier(0.34,1.56,0.64,1);
 }
 .team-card:hover .team-avatar{transform:scale(1.08) rotate(-5deg)}
@@ -1094,7 +1097,7 @@ button, a { touch-action: manipulation; }
 }
 @media (max-width: 480px) {
   #page-home .hero-section {
-    padding-top: 1rem;
+    padding-top: 7rem;
     padding-bottom: 1.5rem;
   }
   #page-home .hero-eyebrow {
@@ -1105,7 +1108,7 @@ button, a { touch-action: manipulation; }
   #page-projects .page-hero-small,
   #page-about .page-hero-small,
   #page-contact .page-hero-small {
-    padding: 5rem 1rem 1.4rem !important;
+    padding: 6.75rem 1rem 1.4rem !important;
   }
   .page-hero-small .page-h1 {
     font-size: clamp(2.45rem, 11.5vw, 3.4rem);
@@ -1115,3 +1118,30 @@ button, a { touch-action: manipulation; }
   }
   .page-hero-small .section-tag { margin-bottom: .75rem; }
 }
+
+/* Agency credibility, named team profiles, and delivery workflow */
+.section-intro{max-width:760px;margin:1rem auto 0;color:var(--text2);font-size:.95rem;line-height:1.75;padding:0 5vw}
+.team-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.team-bio{margin:1rem auto 0;max-width:34ch;color:var(--text2);font-size:.82rem;line-height:1.75}
+.team-note,.evidence-note{padding:1rem 5vw;color:var(--text2);font-size:.75rem;line-height:1.6}
+.delivery-section{padding:3vw 0 8vw}
+.delivery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;padding:0 5vw;background:var(--border);margin-top:2.5rem}
+.delivery-card{background:var(--card-bg);padding:2rem 1.6rem;min-width:0}
+.delivery-number{display:inline-flex;color:var(--accent);font-size:.75rem;letter-spacing:.12em;margin-bottom:1.2rem}
+.delivery-card h3,.delivery-capabilities h3{font-family:'Bebas Neue',sans-serif;font-size:1.45rem;color:var(--text);margin-bottom:.75rem}
+.delivery-card p,.delivery-capabilities p{font-size:.82rem;line-height:1.75;color:var(--text2)}
+.delivery-owner{display:inline-block;margin-top:1.1rem;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.delivery-capabilities{margin:1.5rem 5vw 0;padding:2rem;background:var(--card-bg);border:1px solid var(--border)}
+.project-evidence{padding:2vw 0 5vw}
+.project-evidence-head{padding:0 5vw}
+.evidence-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-top:2rem;padding:0 5vw;background:var(--border)}
+.evidence-stats>div{background:var(--card-bg);padding:2rem;display:flex;flex-direction:column;gap:.5rem}
+.evidence-stats strong{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,4rem);color:var(--accent);line-height:1}
+.evidence-stats span{font-size:.75rem;line-height:1.5;color:var(--text2)}
+@media(max-width:900px){.delivery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.team-grid-three,.delivery-grid,.evidence-stats{grid-template-columns:1fr}.team-grid{padding:0 1rem}.team-card{padding:1.75rem 1.25rem}.delivery-grid{padding:0 1rem}.delivery-card{padding:1.5rem}.delivery-capabilities{margin:1rem 1rem 0;padding:1.25rem}.project-evidence-head{padding:0 1rem}.evidence-stats{padding:0 1rem}.evidence-stats>div{padding:1.4rem}.team-note,.evidence-note{padding:1rem}}
+
+
+/* Header Fiverr CTA — responsive */
+@media(max-width:768px){.nav-right{gap:.65rem}.nav-fiverr-btn{padding:.48rem .72rem;font-size:.62rem;letter-spacing:.06em}}
+@media(max-width:380px){.nav-right{gap:.45rem}.nav-fiverr-btn{padding:.42rem .58rem;font-size:.58rem}.theme-toggle{width:34px;height:34px}}
