@@ -1145,3 +1145,44 @@ button, a { touch-action: manipulation; }
 /* Header Fiverr CTA — responsive */
 @media(max-width:768px){.nav-right{gap:.65rem}.nav-fiverr-btn{padding:.48rem .72rem;font-size:.62rem;letter-spacing:.06em}}
 @media(max-width:380px){.nav-right{gap:.45rem}.nav-fiverr-btn{padding:.42rem .58rem;font-size:.58rem}.theme-toggle{width:34px;height:34px}}
+
+
+/* ── DEVISTA BRAND LOGO UPDATE ───────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  line-height: 0;
+}
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.nav-brand-logo {
+  width: clamp(118px, 12vw, 168px);
+  height: auto;
+  max-height: 58px;
+}
+.loader-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(78vw, 460px);
+  height: auto;
+  margin: 0 auto 2.5rem;
+  overflow: visible;
+}
+.loader-brand-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .nav-brand-logo { width: 112px; max-height: 44px; }
+  .loader-logo-wrap { width: min(88vw, 380px); }
+}
