@@ -782,7 +782,7 @@ input,textarea,select{font-family:inherit;color:inherit;outline:none}
 }
 .team-card:hover{background:var(--bg2)}
 .team-avatar{
-  width:88px;height:88px;border-radius:50%;
+  width:200px;height:200px;border-radius:50%;
   display:block;object-fit:cover;object-position:center;
   border:2px solid var(--border);
   margin:0 auto 1.2rem;
@@ -1139,7 +1139,7 @@ button, a { touch-action: manipulation; }
 .evidence-stats strong{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,4rem);color:var(--accent);line-height:1}
 .evidence-stats span{font-size:.75rem;line-height:1.5;color:var(--text2)}
 @media(max-width:900px){.delivery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.team-grid-three,.delivery-grid,.evidence-stats{grid-template-columns:1fr}.team-grid{padding:0 1rem}.team-card{padding:1.75rem 1.25rem}.delivery-grid{padding:0 1rem}.delivery-card{padding:1.5rem}.delivery-capabilities{margin:1rem 1rem 0;padding:1.25rem}.project-evidence-head{padding:0 1rem}.evidence-stats{padding:0 1rem}.evidence-stats>div{padding:1.4rem}.team-note,.evidence-note{padding:1rem}}
+@media(max-width:600px){.team-grid-three,.delivery-grid,.evidence-stats{grid-template-columns:1fr}.team-grid{padding:0 1rem}.team-card{padding:1.75rem 1.25rem}.team-avatar{width:160px;height:160px}.delivery-grid{padding:0 1rem}.delivery-card{padding:1.5rem}.delivery-capabilities{margin:1rem 1rem 0;padding:1.25rem}.project-evidence-head{padding:0 1rem}.evidence-stats{padding:0 1rem}.evidence-stats>div{padding:1.4rem}.team-note,.evidence-note{padding:1rem}}
 
 
 /* Header Fiverr CTA — responsive */
